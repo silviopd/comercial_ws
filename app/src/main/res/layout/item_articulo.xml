@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imgArticulo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/lblNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgArticulo"
+
+        android:textStyle="bold" />
+
+    <!-- android:minLines="2" android:paddingTop="5dp" -->
+
+    <TextView
+        android:id="@+id/lblCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNombre"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/imgArticulo" />
+
+    <TextView
+        android:id="@+id/lblPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblCodigo"
+        android:textColor="#ff0000"
+        android:layout_alignParentRight="true" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/lblPrecio"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="-"
+            android:id="@+id/btnMenos" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:id="@+id/txtCantidad"
+            android:textSize="15dp"
+            android:text="0" />
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="+"
+            android:id="@+id/btnMas" />
+
+    </LinearLayout>
+
+</RelativeLayout>
